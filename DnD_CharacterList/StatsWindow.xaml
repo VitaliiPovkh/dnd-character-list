@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnD_CharacterList"
         mc:Ignorable="d"
-        Title="StatsWindow" Height="680" Width="800">
-    <Grid>
+        Title="StatsWindow" Height="511" Width="800">
+    <Grid Margin="10,0,0,-137">
         <Grid.RowDefinitions>
             <RowDefinition Height="211*"/>
             <RowDefinition Height="80*"/>

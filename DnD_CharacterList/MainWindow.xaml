@@ -8,30 +8,28 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Имя&#xD;&#xA;" HorizontalAlignment="Left" Margin="11,13,0,0" VerticalAlignment="Top" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="78,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="78,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Image HorizontalAlignment="Left" Height="381" Margin="528,17,0,0" VerticalAlignment="Top" Width="262" Source="/Эйвор.png" Stretch="UniformToFill"/>
-        <Button Content="Характеристики" HorizontalAlignment="Left" Height="50" Margin="10,237,0,0" VerticalAlignment="Top" Width="135"/>
+        <Button Content="Характеристики" HorizontalAlignment="Left" Height="50" Margin="10,237,0,0" VerticalAlignment="Top" Width="135" Click="StatsButton_Click"/>
         <Label Content="Раса&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="27"/>
-        <TextBox HorizontalAlignment="Left" Margin="78,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="261,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="XpBox" HorizontalAlignment="Left" Margin="261,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Опыт" HorizontalAlignment="Left" Margin="217,12,0,0" VerticalAlignment="Top" Height="27"/>
-        <Label Content="Уровень&#xD;&#xA;" HorizontalAlignment="Left" Margin="400,11,0,0" VerticalAlignment="Top" Height="27"/>
+        <Label x:Name="LevelBox" Content="Уровень&#xD;&#xA;" HorizontalAlignment="Left" Margin="400,11,0,0" VerticalAlignment="Top" Height="27"/>
         <Label Content="Класс&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Height="28"/>
-        <TextBox HorizontalAlignment="Left" Margin="78,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Личность" HorizontalAlignment="Left" Height="50" Margin="10,292,0,0" VerticalAlignment="Top" Width="135"/>
         <Button Content="Инвентарь" HorizontalAlignment="Left" Height="50" Margin="10,347,0,0" VerticalAlignment="Top" Width="135"/>
         <Button Content="Карта" HorizontalAlignment="Left" Height="50" Margin="159,292,0,0" VerticalAlignment="Top" Width="135"/>
         <Button Content="Заметки" HorizontalAlignment="Left" Height="50" Margin="309,292,0,0" VerticalAlignment="Top" Width="135"/>
         <Button Content="Заклинания" HorizontalAlignment="Left" Height="50" Margin="159,347,0,0" VerticalAlignment="Top" Width="135"/>
         <Button Content="Кинуть кости" HorizontalAlignment="Left" Height="50" Margin="309,347,0,0" VerticalAlignment="Top" Width="135"/>
-        <Label Content="1" HorizontalAlignment="Left" Margin="456,12,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LevelCount" Content="1" HorizontalAlignment="Left" Margin="456,12,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="" HorizontalAlignment="Left" Margin="420,175,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="" HorizontalAlignment="Left" Margin="440,175,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="" HorizontalAlignment="Left" Margin="459,175,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="" HorizontalAlignment="Left" Margin="420,134,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="" HorizontalAlignment="Left" Margin="440,134,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="" HorizontalAlignment="Left" Margin="459,134,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="78,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SpeedBox" HorizontalAlignment="Left" Margin="78,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Скорость&#xA;" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Height="28"/>
         <Label Content="Жизнь" HorizontalAlignment="Left" Margin="351,128,0,0" VerticalAlignment="Top"/>
         <Label Content="Смерть" HorizontalAlignment="Left" Margin="351,172,0,0" VerticalAlignment="Top"/>
@@ -42,8 +40,39 @@
         <Label Content="24 / 28" HorizontalAlignment="Left" Margin="261,35,0,0" VerticalAlignment="Top"/>
         <Label Content="Хиты" HorizontalAlignment="Left" Margin="219,35,0,0" VerticalAlignment="Top" Height="27"/>
         <Button Content="Владения" HorizontalAlignment="Left" Height="50" Margin="309,237,0,0" VerticalAlignment="Top" Width="135"/>
-        <TextBox HorizontalAlignment="Left" Margin="225,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="HpBar" HorizontalAlignment="Left" Margin="225,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Урон | Лечение" HorizontalAlignment="Center" Margin="0,57,0,0" VerticalAlignment="Top"/>
         <Button Content="Снаряжение" HorizontalAlignment="Left" Height="50" Margin="158,237,0,0" VerticalAlignment="Top" Width="136"/>
+        <ComboBox x:Name="RaceBox" HorizontalAlignment="Left" Height="18" Margin="78,40,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="RaceBox_SelectionChanged" IsReadOnly="True" FontSize="11">
+            <ComboBoxItem Content="Человек"/>
+            <ComboBoxItem Content="Эльф"/>
+            <ComboBoxItem Content="Полуэльф"/>
+            <ComboBoxItem Content="Гном"/>
+            <ComboBoxItem Content="Дворф"/>
+            <ComboBoxItem Content="Драконорожденный"/>
+            <ComboBoxItem Content="Изменяющийся"/>
+            <ComboBoxItem Content="Орк"/>
+            <ComboBoxItem Content="Полуорк"/>
+            <ComboBoxItem Content="Сатир"/>
+            <ComboBoxItem Content="Табакси"/>
+            <ComboBoxItem Content="Тифлинг"/>
+            <ComboBoxItem/>
+        </ComboBox>
+        <ComboBox x:Name="ClassBox" HorizontalAlignment="Left" Height="18" Margin="78,63,0,0" VerticalAlignment="Top" Width="120" FontSize="11" SelectionChanged="ClassBox_SelectionChanged_1">
+            <ComboBoxItem Content="Бард"/>
+            <ComboBoxItem Content="Варвар"/>
+            <ComboBoxItem Content="Воин"/>
+            <ComboBoxItem Content="Волшебник"/>
+            <ComboBoxItem Content="Друид"/>
+            <ComboBoxItem Content="Жрец"/>
+            <ComboBoxItem Content="Изобретатель"/>
+            <ComboBoxItem Content="Колдун"/>
+            <ComboBoxItem Content="Монах"/>
+            <ComboBoxItem Content="Паладин"/>
+            <ComboBoxItem Content="Плут"/>
+            <ComboBoxItem Content="Следопыт"/>
+            <ComboBoxItem Content="Чародей"/>
+        </ComboBox>
+
     </Grid>
 </Window>
