@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnD_CharacterList.CharacterDataClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,12 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для NoteWindow.xaml
     /// </summary>
-    public partial class NoteWindow : Window
+    public partial class NoteWindow : CharacterWindow
     {
-        public NoteWindow()
+        public NoteWindow(Character character)
         {
             InitializeComponent();
+            CharacterData = character;
         }
     }
 }

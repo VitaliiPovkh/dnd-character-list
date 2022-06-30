@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnD_CharacterList.CharacterDataClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,12 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для OwnershipWindow.xaml
     /// </summary>
-    public partial class OwnershipWindow : Window
+    public partial class OwnershipWindow : CharacterWindow
     {
-        public OwnershipWindow()
+        public OwnershipWindow(Character character)
         {
             InitializeComponent();
+            CharacterData = character;
         }
     }
 }

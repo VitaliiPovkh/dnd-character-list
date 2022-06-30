@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnD_CharacterList.CharacterDataClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,12 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для ConsoleWindow.xaml
     /// </summary>
-    public partial class ConsoleWindow : Window
+    public partial class ConsoleWindow : CharacterWindow
     {
-        public ConsoleWindow()
+        public ConsoleWindow(Character character)
         {
             InitializeComponent();
+            CharacterData = character;
         }
     }
 }

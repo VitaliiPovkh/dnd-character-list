@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnD_CharacterList.CharacterDataClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,12 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для StatsWindow.xaml
     /// </summary>
-    public partial class StatsWindow : Window
+    public partial class StatsWindow : CharacterWindow
     {
-        public StatsWindow()
+        public StatsWindow(Character character)
         {
             InitializeComponent();
+            CharacterData = character;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

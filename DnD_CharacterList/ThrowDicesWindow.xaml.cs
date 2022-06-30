@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnD_CharacterList.CharacterDataClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,12 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для ThrowDices.xaml
     /// </summary>
-    public partial class ThrowDicesWindow : Window
+    public partial class ThrowDicesWindow : CharacterWindow
     {
-        public ThrowDicesWindow()
+        public ThrowDicesWindow(Character character)
         {
             InitializeComponent();
+            CharacterData = character;
         }
     }
 }

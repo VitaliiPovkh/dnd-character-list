@@ -1,24 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using DnD_CharacterList.CharacterDataClasses;
 
 namespace DnD_CharacterList
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : CharacterWindow
     {
         public MainWindow()
         {
@@ -26,6 +15,8 @@ namespace DnD_CharacterList
             RaceBox.SelectionChanged += RaceBox_SelectionChanged;
             ClassBox.SelectionChanged += ClassBox_SelectionChanged_1;
             XpBox.TextChanged += XpBox_TextChanged;
+
+            CharacterData = new Character();
         }
 
         private void RaceBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -126,7 +117,7 @@ namespace DnD_CharacterList
        
         private void StatsButton_Click(object sender, RoutedEventArgs e)
         {
-            StatsWindow stats = new();
+            StatsWindow stats = new StatsWindow(CharacterData);
             stats.Show();
         }
         
