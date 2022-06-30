@@ -39,7 +39,7 @@ namespace DnD_CharacterList {
     /// <summary>
     /// MainWindow
     /// </summary>
-    public partial class MainWindow : CharacterWindow, System.Windows.Markup.IComponentConnector {
+    public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
         #line 11 "..\..\..\MainWindow.xaml"
@@ -117,7 +117,7 @@ namespace DnD_CharacterList {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DnD_CharacterList;V1.0.0.0;component/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DnD_CharacterList;component/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

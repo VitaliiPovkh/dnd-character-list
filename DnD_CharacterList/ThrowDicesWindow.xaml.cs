@@ -18,8 +18,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для ThrowDices.xaml
     /// </summary>
-    public partial class ThrowDicesWindow : CharacterWindow
+    public partial class ThrowDicesWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public ThrowDicesWindow(Character character)
         {
             InitializeComponent();

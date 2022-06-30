@@ -4,8 +4,8 @@ using DnD_CharacterList.CharacterDataClasses;
 
 namespace DnD_CharacterList
 {
-    public abstract class CharacterWindow : Window
+    public interface ICharacterWindow
     {
-        public Character CharacterData { get; protected set; }
+        public Character CharacterData { get; set; }
     }
 }

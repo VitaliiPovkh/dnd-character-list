@@ -39,7 +39,7 @@ namespace DnD_CharacterList {
     /// <summary>
     /// InventoryWindow
     /// </summary>
-    public partial class InventoryWindow : CharacterWindow, System.Windows.Markup.IComponentConnector {
+    public partial class InventoryWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         private bool _contentLoaded;
         
@@ -53,7 +53,7 @@ namespace DnD_CharacterList {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DnD_CharacterList;V1.0.0.0;component/inventorywindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DnD_CharacterList;component/inventorywindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\InventoryWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

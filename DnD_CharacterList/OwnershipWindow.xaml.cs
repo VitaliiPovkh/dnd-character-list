@@ -18,8 +18,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для OwnershipWindow.xaml
     /// </summary>
-    public partial class OwnershipWindow : CharacterWindow
+    public partial class OwnershipWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public OwnershipWindow(Character character)
         {
             InitializeComponent();

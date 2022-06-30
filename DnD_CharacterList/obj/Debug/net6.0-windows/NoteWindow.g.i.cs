@@ -39,7 +39,7 @@ namespace DnD_CharacterList {
     /// <summary>
     /// NoteWindow
     /// </summary>
-    public partial class NoteWindow : CharacterWindow, System.Windows.Markup.IComponentConnector {
+    public partial class NoteWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         private bool _contentLoaded;
         
@@ -53,7 +53,7 @@ namespace DnD_CharacterList {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DnD_CharacterList;V1.0.0.0;component/notewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DnD_CharacterList;component/notewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\NoteWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -18,8 +18,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для SpellWindow.xaml
     /// </summary>
-    public partial class SpellWindow : CharacterWindow
+    public partial class SpellWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public SpellWindow(Character character)
         {
             InitializeComponent();

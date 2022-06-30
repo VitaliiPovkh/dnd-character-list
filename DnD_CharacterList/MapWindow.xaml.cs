@@ -18,8 +18,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для MapWindow.xaml
     /// </summary>
-    public partial class MapWindow : CharacterWindow
+    public partial class MapWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public MapWindow(Character character)
         {
             InitializeComponent();

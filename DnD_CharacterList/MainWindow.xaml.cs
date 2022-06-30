@@ -7,8 +7,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : CharacterWindow
+    public partial class MainWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public MainWindow()
         {
             InitializeComponent();

@@ -18,8 +18,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для StatsWindow.xaml
     /// </summary>
-    public partial class StatsWindow : CharacterWindow
+    public partial class StatsWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public StatsWindow(Character character)
         {
             InitializeComponent();

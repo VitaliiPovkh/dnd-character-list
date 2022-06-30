@@ -18,12 +18,16 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для ConsoleWindow.xaml
     /// </summary>
-    public partial class ConsoleWindow : CharacterWindow
+    public partial class ConsoleWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
+
         public ConsoleWindow(Character character)
         {
             InitializeComponent();
             CharacterData = character;
         }
+
+        
     }
 }

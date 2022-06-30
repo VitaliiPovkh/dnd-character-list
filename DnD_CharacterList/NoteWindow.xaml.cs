@@ -18,8 +18,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для NoteWindow.xaml
     /// </summary>
-    public partial class NoteWindow : CharacterWindow
+    public partial class NoteWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public NoteWindow(Character character)
         {
             InitializeComponent();

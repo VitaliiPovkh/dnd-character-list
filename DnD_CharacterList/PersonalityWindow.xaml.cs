@@ -18,8 +18,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для PersonalityWindow.xaml
     /// </summary>
-    public partial class PersonalityWindow : CharacterWindow
+    public partial class PersonalityWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public PersonalityWindow(Character character)
         {
             InitializeComponent();

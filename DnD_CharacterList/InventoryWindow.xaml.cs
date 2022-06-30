@@ -18,8 +18,9 @@ namespace DnD_CharacterList
     /// <summary>
     /// Логика взаимодействия для InventoryWindow.xaml
     /// </summary>
-    public partial class InventoryWindow : CharacterWindow
+    public partial class InventoryWindow : Window, ICharacterWindow
     {
+        public Character CharacterData { get; set; }
         public InventoryWindow(Character character)
         {
             InitializeComponent();
