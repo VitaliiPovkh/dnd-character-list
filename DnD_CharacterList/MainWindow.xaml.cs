@@ -109,7 +109,9 @@ namespace DnD_CharacterList
 
         }
         private void equipment_ButtonClick(object sender, RoutedEventArgs e)
-        {
+        {   
+            EquipmentWindow equipment = new EquipmentWindow();
+            equipment.Show();
         }
         private void PersonalityButtonClick(object sender, RoutedEventArgs e)
         {

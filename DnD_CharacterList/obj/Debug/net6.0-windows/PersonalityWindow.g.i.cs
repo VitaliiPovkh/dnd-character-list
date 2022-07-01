@@ -53,7 +53,7 @@ namespace DnD_CharacterList {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DnD_CharacterList;V1.0.0.0;component/personalitywindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DnD_CharacterList;component/personalitywindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PersonalityWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

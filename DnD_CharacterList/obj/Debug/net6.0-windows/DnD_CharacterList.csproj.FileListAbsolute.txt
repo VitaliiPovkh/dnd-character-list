@@ -115,3 +115,5 @@ D:\Programming\Repos\DnD_CharacterList\DnD_CharacterList\obj\Debug\net6.0-window
 D:\Programming\Repos\DnD_CharacterList\DnD_CharacterList\obj\Debug\net6.0-windows\DnD_CharacterList.csproj.CoreCompileInputs.cache
 D:\Programming\Repos\DnD_CharacterList\DnD_CharacterList\obj\Debug\net6.0-windows\DnD_CharacterList.genruntimeconfig.cache
 D:\Programming\Repos\DnD_CharacterList\DnD_CharacterList\obj\Debug\net6.0-windows\ref\DnD_CharacterList.dll
+C:\Users\Марк\Documents\GIT\DnD_CharacterList\obj\Debug\net6.0-windows\EquipmentWindow.g.cs
+C:\Users\Марк\Documents\GIT\DnD_CharacterList\obj\Debug\net6.0-windows\EquipmentWindow.baml
