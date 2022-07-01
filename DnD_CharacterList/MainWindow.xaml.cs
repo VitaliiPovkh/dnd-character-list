@@ -9,111 +9,30 @@ namespace DnD_CharacterList
     /// </summary>
     public partial class MainWindow : Window, ICharacterWindow
     {
+        private string[] CharRace;
+        private string[] CharClass;
         public Character CharacterData { get; set; }
         public MainWindow()
-        {
-            InitializeComponent();
+        {   InitializeComponent();
             RaceBox.SelectionChanged += RaceBox_SelectionChanged;
             ClassBox.SelectionChanged += ClassBox_SelectionChanged_1;
             XpBox.TextChanged += XpBox_TextChanged;
-
+            CharRace = new string[] {"Human","Elf","Half-Elf","Gnome","Dwarf","Dragonborn","Changeling",
+            "Ork","Half-Ork","Satyr","Tabaxy","Tiefling" };
+            CharClass = new string[] { "Bard", "Barbarian", "Warrior", "Wizard", "Druid", "Priest",
+                "Inventor","Warlock", "Monk","Paladin","Dodger", "Pathfinder","Corcerer"};
             CharacterData = new Character();
         }
-
+       
+        
         private void RaceBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch (RaceBox.SelectedIndex)
-            {
-                //Human
-                case 0:
-                    break;
-                //Elf
-                case 1:
-                    break;
-                //half-Elf
-                case 2:
-                    break;
-                //Gnome
-                case 3:
-                    break;
-                //Dwarf
-                case 4:
-                    break;
-                //Dragonborn... FUS RO DAH!!!!!! 
-                case 5:
-                    break;
-                //Changeling
-                case 6:
-                    break;
-                //Ork
-                case 7:
-                    break;
-                //Half-Ork
-                case 8:
-                    break;
-                //Satyr
-                case 9:
-                    break;
-                //Tabaxy
-                case 10:
-                    break;
-                //Tiefling
-                case 11:
-                    break;
-            }
-
-
+           
         }
 
         private void ClassBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            switch (ClassBox.SelectedIndex)
-            {
-                //Bard
-                case 0: 
-                    break;
-                //Barbarian
-                case 1:
-                    break;
-                //Warrior
-                case 2:
-                    break;
-                //Wolshebnik
-                case 3:
-                    break;
-                //Druid
-                case 4:
-                    break;
-                //Priest
-                case 5:
-                    break;
-                //inventor
-                case 6:
-                    break;
-                //Koldun
-                case 7:
-                    break;
-                //Monk
-                case 8:
-                    break;
-                //retro-paladin
-                case 9:
-                    break;
-                //plut
-                case 10:
-                    break;
-                //sledopyt
-                case 11:
-                    break;
-                //Charodey
-                case 12:
-                    break;
-
-
-
-
-
-            }
+            
         }
        
         
@@ -189,17 +108,49 @@ namespace DnD_CharacterList
 
 
         }
-
+        private void equipment_ButtonClick(object sender, RoutedEventArgs e)
+        {
+        }
         private void PersonalityButtonClick(object sender, RoutedEventArgs e)
         {
             PersonalityWindow personalityWindow = new PersonalityWindow(CharacterData);
             personalityWindow.Show();
         }
-
         private void StatsButtonClick(object sender, RoutedEventArgs e)
         {
             StatsWindow stats = new StatsWindow(CharacterData);
             stats.Show();
         }
+        private void Ownership_ButtonClick(object sender, RoutedEventArgs e) 
+        {
+            OwnershipWindow ownership = new OwnershipWindow(CharacterData);
+            ownership.Show();
+        }
+        private void Map_ButtonClick(object sender, RoutedEventArgs e)
+        { 
+            MapWindow map = new MapWindow(CharacterData);
+            map.Show();
+        }
+        private void Note_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            NoteWindow note = new NoteWindow(CharacterData);
+            note.Show();
+        }
+        private void Inventory_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            InventoryWindow inventory = new InventoryWindow(CharacterData);
+            inventory.Show();
+        }
+        private void Spells_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            SpellWindow spell = new SpellWindow(CharacterData);
+            spell.Show();
+        }
+        private void Dices_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            ThrowDicesWindow dicesWindow = new ThrowDicesWindow(CharacterData);
+            dicesWindow.Show();
+        }
+
     }
 }
