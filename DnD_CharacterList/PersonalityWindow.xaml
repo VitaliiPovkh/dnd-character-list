@@ -5,8 +5,85 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnD_CharacterList"
         mc:Ignorable="d"
-        Title="PersonalityWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="PersonalityWindow" Height="1209" Width="797" Background="#FF50AEC8">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+        <Grid RenderTransformOrigin="0.497,0.364" Height="1183">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="116*"/>
+                <RowDefinition Height="379*"/>
+                <RowDefinition Height="231*"/>
+                <RowDefinition Height="457*"/>
+            </Grid.RowDefinitions>
+            <Grid Margin="0,0,0,8">
+                <Grid.RowDefinitions>
+                    <RowDefinition SharedSizeGroup="A"/>
+                    <RowDefinition SharedSizeGroup="A"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Мировоззрение" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                <Label Content="Профессия" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Grid.Column="1"/>
+                <TextBox HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="255" Height="56" FontFamily="Monotype Corsiva"/>
+                <TextBox HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="255" Height="56" Grid.Column="1" FontFamily="Monotype Corsiva"/>
+            </Grid>
+            <Grid Margin="0,10,0,10" Grid.Row="1" Height="360">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                </Grid.ColumnDefinitions>
+                <WrapPanel Orientation="Vertical">
+                    <Label Content="Языки" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                    <TextBox Height="76" Width="303" Margin="10,0,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" FontFamily="Monotype Corsiva"/>
+                    <Label Content="Черты" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                    <TextBox Margin="10,0,0,0" Height="200" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" FontFamily="Monotype Corsiva"/>
+                </WrapPanel>
+                <WrapPanel Grid.Column="1" Orientation="Vertical">
+                    <Label Content="Идеалы" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                    <TextBox Height="76" Width="303" Margin="10,0,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" FontFamily="Monotype Corsiva"/>
+                    <Label Content="Привязанности" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                    <TextBox Height="76" Width="303" Margin="10,0,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" FontFamily="Monotype Corsiva"/>
+                    <Label Content="Слабости" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                    <TextBox Height="89" Width="303" Margin="10,0,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" FontFamily="Monotype Corsiva"/>
+                </WrapPanel>
+            </Grid>
+            <Grid Grid.Row="2" Margin="0,23,0,9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                </Grid.ColumnDefinitions>
+                <WrapPanel Orientation="Vertical">
+                    <Label Content="Внешность" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                    <TextBox Height="155" Width="303" Margin="10,0,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" FontFamily="Monotype Corsiva"/>
+                </WrapPanel>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition SharedSizeGroup="B"/>
+                        <ColumnDefinition SharedSizeGroup="B"/>
+                    </Grid.ColumnDefinitions>
+                    <WrapPanel Orientation="Vertical">
+                        <Label Content="Возраст" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                        <TextBox Height="29" Width="152" Margin="10,0,0,0" FontFamily="Monotype Corsiva"/>
+                        <Label Content="Вес" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                        <TextBox Height="29" Width="152" Margin="10,0,0,0" FontFamily="Monotype Corsiva"/>
+                        <Label Content="Цвет кожи" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                        <TextBox Height="29" Width="152" Margin="10,0,0,0" FontFamily="Monotype Corsiva"/>
+                    </WrapPanel>
+                    <WrapPanel Grid.Column="1" Orientation="Vertical">
+                        <Label Content="Рост" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                        <TextBox Height="29" Width="152" Margin="10,0,0,0" FontFamily="Monotype Corsiva"/>
+                        <Label Content="Цвет глаз" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                        <TextBox Height="29" Width="152" Margin="10,0,0,0" FontFamily="Monotype Corsiva"/>
+                        <Label Content="Волосы" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                        <TextBox Height="29" Width="152" Margin="10,0,0,0" FontFamily="Monotype Corsiva"/>
+                    </WrapPanel>
+                </Grid>
+            </Grid>
+            <WrapPanel Grid.Row="3" Orientation="Vertical" Margin="0,10,0,0">
+                <Label Content="Предыстория" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold"/>
+                <TextBox Height="402" Width="760" Margin="11,0,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" FontFamily="Monotype Corsiva"/>
+            </WrapPanel>
+        </Grid>
+    </ScrollViewer>
 </Window>
