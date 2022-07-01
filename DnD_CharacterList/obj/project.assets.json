@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Vitalii\\.nuget\\packages\\": {}
+    "C:\\Users\\Марк\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\Repos\\DnD_CharacterList\\DnD_CharacterList\\DnD_CharacterList.csproj",
+      "projectUniqueName": "C:\\Users\\Марк\\Documents\\GIT\\DnD_CharacterList\\DnD_CharacterList.csproj",
       "projectName": "DnD_CharacterList",
-      "projectPath": "D:\\Programming\\Repos\\DnD_CharacterList\\DnD_CharacterList\\DnD_CharacterList.csproj",
-      "packagesPath": "C:\\Users\\Vitalii\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\Repos\\DnD_CharacterList\\DnD_CharacterList\\obj\\",
+      "projectPath": "C:\\Users\\Марк\\Documents\\GIT\\DnD_CharacterList\\DnD_CharacterList.csproj",
+      "packagesPath": "C:\\Users\\Марк\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Марк\\Documents\\GIT\\DnD_CharacterList\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Vitalii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Марк\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

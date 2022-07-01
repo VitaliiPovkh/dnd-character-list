@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Programming\Repos\DnD_CharacterList\DnD_CharacterList\obj\Debug\net6.0-windows\
+C:\Users\Марк\Documents\GIT\DnD_CharacterList\obj\Debug\net6.0-windows\
 DnD_CharacterList
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\Programming\Repos\DnD_CharacterList\DnD_CharacterList\App.xaml
+C:\Users\Марк\Documents\GIT\DnD_CharacterList\App.xaml
 10-274232050
 
 16-1938777641
 1942030480316
 ConsoleWindow.xaml;InventoryWindow.xaml;MainWindow.xaml;MapWindow.xaml;NoteWindow.xaml;OwnershipWindow.xaml;PersonalityWindow.xaml;SpellWindow.xaml;StatsWindow.xaml;ThrowDicesWindow.xaml;
 
-False
+True
 
