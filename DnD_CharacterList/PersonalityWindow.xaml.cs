@@ -26,5 +26,6 @@ namespace DnD_CharacterList
             InitializeComponent();
             CharacterData = character;
         }
+
     }
 }

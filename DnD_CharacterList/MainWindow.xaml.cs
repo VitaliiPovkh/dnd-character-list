@@ -116,11 +116,6 @@ namespace DnD_CharacterList
             }
         }
        
-        private void StatsButton_Click(object sender, RoutedEventArgs e)
-        {
-            StatsWindow stats = new StatsWindow(CharacterData);
-            stats.Show();
-        }
         
         private void XpBox_TextChanged(object sender, RoutedEventArgs e) {
             int xpcount = 0;
@@ -195,8 +190,16 @@ namespace DnD_CharacterList
 
         }
 
+        private void PersonalityButtonClick(object sender, RoutedEventArgs e)
+        {
+            PersonalityWindow personalityWindow = new PersonalityWindow(CharacterData);
+            personalityWindow.Show();
+        }
 
-
-
+        private void StatsButtonClick(object sender, RoutedEventArgs e)
+        {
+            StatsWindow stats = new StatsWindow(CharacterData);
+            stats.Show();
+        }
     }
 }

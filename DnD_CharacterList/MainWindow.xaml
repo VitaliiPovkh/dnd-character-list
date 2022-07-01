@@ -10,13 +10,13 @@
         <Label Content="Имя&#xD;&#xA;" HorizontalAlignment="Left" Margin="11,13,0,0" VerticalAlignment="Top" Height="25"/>
         <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="78,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Image HorizontalAlignment="Left" Height="381" Margin="528,17,0,0" VerticalAlignment="Top" Width="262" Source="/Эйвор.png" Stretch="UniformToFill"/>
-        <Button Content="Характеристики" HorizontalAlignment="Left" Height="50" Margin="10,237,0,0" VerticalAlignment="Top" Width="135" Click="StatsButton_Click"/>
+        <Button Content="Характеристики" HorizontalAlignment="Left" Height="50" Margin="10,237,0,0" VerticalAlignment="Top" Width="135" Click="StatsButtonClick"/>
         <Label Content="Раса&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Height="27"/>
         <TextBox x:Name="XpBox" HorizontalAlignment="Left" Margin="261,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Опыт" HorizontalAlignment="Left" Margin="217,12,0,0" VerticalAlignment="Top" Height="27"/>
         <Label x:Name="LevelBox" Content="Уровень&#xD;&#xA;" HorizontalAlignment="Left" Margin="400,11,0,0" VerticalAlignment="Top" Height="27"/>
         <Label Content="Класс&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Height="28"/>
-        <Button Content="Личность" HorizontalAlignment="Left" Height="50" Margin="10,292,0,0" VerticalAlignment="Top" Width="135"/>
+        <Button Content="Личность" HorizontalAlignment="Left" Height="50" Margin="10,292,0,0" VerticalAlignment="Top" Width="135" Click="PersonalityButtonClick"/>
         <Button Content="Инвентарь" HorizontalAlignment="Left" Height="50" Margin="10,347,0,0" VerticalAlignment="Top" Width="135"/>
         <Button Content="Карта" HorizontalAlignment="Left" Height="50" Margin="159,292,0,0" VerticalAlignment="Top" Width="135"/>
         <Button Content="Заметки" HorizontalAlignment="Left" Height="50" Margin="309,292,0,0" VerticalAlignment="Top" Width="135"/>
