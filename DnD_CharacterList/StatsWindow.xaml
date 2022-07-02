@@ -40,53 +40,53 @@
             <Label Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="4" Margin="0,13,0,0" Grid.Row="3" Height="26" Width="38"/>
             <Label Content="Label" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="5" Margin="0,13,0,0" Grid.Row="3" Height="26" Width="38"/>
             <Button Content="Button" HorizontalAlignment="Left" Height="0" Margin="53,12,0,0" Grid.Row="2" VerticalAlignment="Top" Width="40"/>
-            <Grid Grid.Row="2" Height="36" VerticalAlignment="Center" Margin="-5,0,4,0">
+            <Grid Grid.Row="2" Height="36" VerticalAlignment="Bottom" Margin="-5,0,4,3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="67*"/>
                     <ColumnDefinition Width="66*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="strMinus" Content="-" Margin="29,6,0,0" VerticalAlignment="Top" Height="20" Background="White" HorizontalAlignment="Left" Width="19"/>
-                <Button x:Name="strPlus" Content="+" Margin="0,6,26,0" VerticalAlignment="Top" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
+                <Button x:Name="strMinus" Content="-" Margin="29,0,0,10" Background="White" HorizontalAlignment="Left" Width="19" Height="20" VerticalAlignment="Bottom"/>
+                <Button x:Name="strPlus" Content="+" Margin="0,0,26,10" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right" Height="20" VerticalAlignment="Bottom"/>
             </Grid>
-            <Grid Grid.Row="2" Height="36" VerticalAlignment="Top" Margin="3,2,130,0" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid Grid.Row="2" Margin="3,2,0,4" Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="67*"/>
                     <ColumnDefinition Width="66*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="DexMinus" Content="-" Margin="29,6,0,0" VerticalAlignment="Top" Height="20" Background="White" HorizontalAlignment="Left" Width="18"/>
-                <Button x:Name="DexPlus" Content="+" Margin="0,6,23,0" VerticalAlignment="Top" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
+                <Button x:Name="DexMinus" Content="-" Margin="29,0,0,10" VerticalAlignment="Bottom" Height="20" Background="White" HorizontalAlignment="Left" Width="18"/>
+                <Button x:Name="DexPlus" Content="+" Margin="0,0,23,10" VerticalAlignment="Bottom" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
             </Grid>
-            <Grid Grid.Row="2" Height="36" VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2">
+            <Grid Grid.Row="2" Height="36" VerticalAlignment="Bottom" Margin="2,0,0,3" Grid.Column="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="67*"/>
                     <ColumnDefinition Width="66*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="constMinus" Content="-" Margin="29,6,0,0" VerticalAlignment="Top" Height="20" Background="White" HorizontalAlignment="Left" Width="19"/>
-                <Button x:Name="ConstPlus" Content="+" Margin="0,6,23,0" VerticalAlignment="Top" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
+                <Button x:Name="constMinus" Content="-" Margin="29,0,0,10" VerticalAlignment="Bottom" Height="20" Background="White" HorizontalAlignment="Left" Width="19"/>
+                <Button x:Name="ConstPlus" Content="+" Margin="0,0,23,10" VerticalAlignment="Bottom" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
             </Grid>
-            <Grid Grid.Row="2" Height="36" VerticalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,131,0">
+            <Grid Grid.Row="2" Height="36" VerticalAlignment="Bottom" Grid.Column="3" Margin="0,0,1,3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="67*"/>
                     <ColumnDefinition Width="66*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="IntMinus" Content="-" Margin="29,6,0,0" VerticalAlignment="Top" Height="20" Background="White" HorizontalAlignment="Left" Width="18"/>
-                <Button x:Name="IntPlus" Content="+" Margin="0,6,25,0" VerticalAlignment="Top" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
+                <Button x:Name="IntMinus" Content="-" Margin="29,0,0,10" VerticalAlignment="Bottom" Height="20" Background="White" HorizontalAlignment="Left" Width="18"/>
+                <Button x:Name="IntPlus" Content="+" Margin="0,0,25,10" VerticalAlignment="Bottom" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
             </Grid>
-            <Grid Grid.Row="2" Height="36" VerticalAlignment="Center" Grid.Column="4" Margin="2,0,0,0">
+            <Grid Grid.Row="2" Height="36" VerticalAlignment="Bottom" Grid.Column="4" Margin="2,0,0,3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="67*"/>
                     <ColumnDefinition Width="66*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="WisMinus" Content="-" Margin="28,6,0,0" VerticalAlignment="Top" Height="20" Background="White" HorizontalAlignment="Left" Width="19"/>
-                <Button x:Name="WisPlus" Content="+" Margin="0,6,23,0" VerticalAlignment="Top" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
+                <Button x:Name="WisMinus" Content="-" Margin="28,0,0,10" VerticalAlignment="Bottom" Height="20" Background="White" HorizontalAlignment="Left" Width="19"/>
+                <Button x:Name="WisPlus" Content="+" Margin="0,0,23,10" VerticalAlignment="Bottom" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
             </Grid>
-            <Grid Grid.Row="2" Height="36" VerticalAlignment="Center" Grid.Column="5" Margin="1,0,-2,0">
+            <Grid Grid.Row="2" Height="36" VerticalAlignment="Bottom" Grid.Column="5" Margin="1,0,-2,3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="67*"/>
                     <ColumnDefinition Width="66*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="CharMInus" Content="-" Margin="28,6,0,0" VerticalAlignment="Top" Height="20" Background="White" HorizontalAlignment="Left" Width="19"/>
-                <Button x:Name="CharPlus" Content="+" Margin="0,6,26,0" VerticalAlignment="Top" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
+                <Button x:Name="CharMInus" Content="-" Margin="28,0,0,10" VerticalAlignment="Bottom" Height="20" Background="White" HorizontalAlignment="Left" Width="19"/>
+                <Button x:Name="CharPlus" Content="+" Margin="0,0,26,10" VerticalAlignment="Bottom" Height="20" Background="White" Grid.Column="1" Width="20" HorizontalAlignment="Right"/>
             </Grid>
             <Label x:Name="Strength" Content="8" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="White" Margin="0,21,0,0" Grid.RowSpan="2" HorizontalAlignment="Center" Width="48" Height="50" VerticalAlignment="Top"/>
             <Label x:Name="Dexterity" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,21,0,0" Background="White" Grid.Column="1" Content="8" Height="50" Grid.RowSpan="2" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -158,18 +158,18 @@
         <CheckBox x:Name="IntimidationBuff1" Content="" HorizontalAlignment="Left" Height="17" Margin="576,194,0,0" Grid.Row="2" VerticalAlignment="Top" Width="15"/>
         <CheckBox x:Name="introdutionBuff1" Content="" HorizontalAlignment="Left" Height="17" Margin="576,224,0,0" Grid.Row="2" VerticalAlignment="Top" Width="15"/>
         <CheckBox x:Name="ConvintionBuff1" Content="" HorizontalAlignment="Left" Height="17" Margin="576,255,0,0" Grid.Row="2" VerticalAlignment="Top" Width="15"/>
-        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="2,129,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="138,129,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="269,129,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="395,129,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="528,129,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="661,129,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label x:Name="CharismaSave" Content="0" HorizontalAlignment="Left" Margin="737,130,0,6" Width="31"/>
-        <Label x:Name="WisdomSave" Content="0" HorizontalAlignment="Left" Margin="605,129,0,7" Width="31"/>
-        <Label x:Name="IntellectSave" Content="0" HorizontalAlignment="Left" Margin="476,130,0,5" Width="31"/>
-        <Label x:Name="ConstitutionSave" Content="0" HorizontalAlignment="Left" Margin="348,130,0,5" Width="31"/>
-        <Label x:Name="DexteritySave" Content="0" HorizontalAlignment="Left" Margin="215,130,0,5" Width="31"/>
-        <Label x:Name="StrengthSave" Content="0" HorizontalAlignment="Left" Margin="82,130,0,5" Width="31"/>
+        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="3,125,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="139,125,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="270,125,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="396,125,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="529,125,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label Content="СпасБросок: " HorizontalAlignment="Left" Height="29" Margin="662,125,0,0" VerticalAlignment="Top" Width="136"/>
+        <Label x:Name="CharismaSave" Content="0" HorizontalAlignment="Left" Margin="738,126,0,36" Width="31" Grid.RowSpan="2"/>
+        <Label x:Name="WisdomSave" Content="0" HorizontalAlignment="Left" Margin="606,125,0,36" Width="31" Grid.RowSpan="2"/>
+        <Label x:Name="IntellectSave" Content="0" HorizontalAlignment="Left" Margin="477,126,0,43" Width="31" Grid.RowSpan="2"/>
+        <Label x:Name="ConstitutionSave" Content="0" HorizontalAlignment="Left" Margin="349,126,0,43" Width="31" Grid.RowSpan="2"/>
+        <Label x:Name="DexteritySave" Content="0" HorizontalAlignment="Left" Margin="216,126,0,43" Width="31" Grid.RowSpan="2"/>
+        <Label x:Name="StrengthSave" Content="0" HorizontalAlignment="Left" Margin="83,126,0,43" Width="31" Grid.RowSpan="2"/>
         <Label Content="Пассивная Мудрость :" HorizontalAlignment="Left" Height="26" Margin="201,161,0,0" VerticalAlignment="Top" Width="163" Grid.RowSpan="2"/>
         <Label Content="Скорость :" HorizontalAlignment="Left" Height="26" Margin="202,19,0,0" VerticalAlignment="Top" Width="208" Grid.Row="1" Grid.RowSpan="2"/>
         <Label x:Name="PassiveWisdom" Content="0" HorizontalAlignment="Left" Height="31" Margin="328,162,0,0" VerticalAlignment="Top" Width="46" Grid.RowSpan="2"/>
