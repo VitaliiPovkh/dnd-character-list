@@ -346,28 +346,9 @@
         <Label Content="Класс доспеха&#xA;" HorizontalAlignment="Left" Margin="15,165,0,0" VerticalAlignment="Top" Height="25" Foreground="#FFB3AD5C"/>
         <TextBox HorizontalAlignment="Left" Height="59" Margin="147,107,0,0" TextWrapping="WrapWithOverflow" Text="10" VerticalAlignment="Top" Width="76" AllowDrop="True" TextAlignment="Center" FontStretch="Normal" FontStyle="Normal" CharacterCasing="Normal" FontSize="36" Foreground="#FFB3AD5C" Background="#FF2D0000" BorderBrush="#FFB3B2AB"/>
         <Label Content="Инициатива&#xA;" HorizontalAlignment="Left" Margin="146,166,0,0" VerticalAlignment="Top" Height="25" Foreground="#FFB3AD5C" Width="86"/>
-        <Label Content="28&#xD;&#xA;" HorizontalAlignment="Left" Margin="254,71,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
-        <Label Content="Хиты" HorizontalAlignment="Left" Margin="212,71,0,0" VerticalAlignment="Top" Height="27" Foreground="#FFB3AD5C"/>
+        <Label Content="Хиты" HorizontalAlignment="Left" Margin="221,71,0,0" VerticalAlignment="Top" Height="27" Foreground="#FFB3AD5C"/>
         <Button Content="Владения" HorizontalAlignment="Left" Height="54" Margin="358,226,0,0" VerticalAlignment="Top" Width="146" Foreground="#FFB3AD5C" Background="#FF2D0000" Click="Ownership_ButtonClick"/>
-        <TextBox x:Name="HpBar" HorizontalAlignment="Left" Margin="306,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Foreground="#FFB3AD5C">
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Pad">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FFB90000" Offset="0"/>
-                    <GradientStop Color="#FF250303" Offset="1"/>
-                    <GradientStop Color="#FFAA0000" Offset="0.977"/>
-                    <GradientStop Color="#FF280202" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
-        </TextBox>
-        <Label Content="Урон | Лечение" HorizontalAlignment="Left" Margin="426,72,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
+        <Label Content="Урон | Лечение" HorizontalAlignment="Left" Margin="426,70,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
         <Button Content="Снаряжение" HorizontalAlignment="Left" Height="54" Margin="196,226,0,0" VerticalAlignment="Top" Width="146" Foreground="#FFB3AD5C" Background="#FF2D0000" Click="equipment_ButtonClick"/>
         <ComboBox Style="{DynamicResource ComboBoxStyle1}" x:Name="RaceBox" HorizontalAlignment="Left" Height="20" Margin="69,51,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="RaceBox_SelectionChanged" IsReadOnly="True" FontSize="11" Foreground="#FFB3AD4F" BorderBrush="#FF350B0B" Background="{x:Null}">
             <ComboBoxItem Content="Человек" Background="#FF2D0000" BorderBrush="#FF2D0000"/>
@@ -418,6 +399,11 @@
         <CheckBox Content="&#xA;" HorizontalAlignment="Left" Margin="366,119,0,0" VerticalAlignment="Top" Width="19" Height="19" Background="White"/>
         <CheckBox Content="&#xA;" HorizontalAlignment="Left" Margin="386,119,0,0" VerticalAlignment="Top" Width="19" Height="19" Background="White"/>
         <CheckBox Content="&#xA;" HorizontalAlignment="Left" Margin="406,119,0,0" VerticalAlignment="Top" Height="19" Width="19" Background="White"/>
+        <ProgressBar x:Name="HealthBar" HorizontalAlignment="Left" Height="20" Margin="305,74,0,0" VerticalAlignment="Top" Width="120" Value="70" Background="#FF120000" Foreground="#FFE01616" BorderBrush="#FF1F0000"/>
+        <TextBox x:Name="MaxHealth" HorizontalAlignment="Left" Height="21" Margin="281,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="23" Background="#FF1F0000" BorderBrush="{x:Null}" Foreground="#FFB3AD5C" Text="28"/>
+        <Label Content="/" HorizontalAlignment="Left" Height="23" Margin="271,72,0,0" VerticalAlignment="Top" Width="18" Foreground="#FFB3AD5C"/>
+        <Label x:Name="CurrentHealth" Content="24" HorizontalAlignment="Left" Height="28" Margin="254,72,0,0" VerticalAlignment="Top" Width="23" Foreground="#FFB3AD5C"/>
+        <TextBox x:Name="DamageHealBar" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="20" Margin="304,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB3AD5C"/>
 
     </Grid>
 
