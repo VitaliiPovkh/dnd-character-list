@@ -339,14 +339,14 @@
         <Button Content="Заметки" HorizontalAlignment="Left" Height="54" Margin="358,285,0,0" VerticalAlignment="Top" Width="146" Foreground="#FFB3AD5C" Background="#FF2D0000" Grid.RowSpan="2" Click="Note_ButtonClick"/>
         <Button Content="Заклинания" HorizontalAlignment="Left" Height="54" Margin="197,345,0,0" VerticalAlignment="Top" Width="145" Foreground="#FFB3AD5C" Background="#FF2D0000" Click="Spells_ButtonClick"/>
         <Button Content="Кинуть кости" HorizontalAlignment="Left" Height="54" Margin="358,345,0,0" VerticalAlignment="Top" Width="146" Foreground="#FFB3AD5C" Background="#FF2D0000" Click="Dices_ButtonClick"/>
-        <Label x:Name="LevelCount" Content="1" HorizontalAlignment="Left" Margin="478,25,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C" Height="27" Width="24" FontSize="16"/>
+        <Label x:Name="LevelCount" Content="1" HorizontalAlignment="Left" Margin="478,25,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C" Height="27" Width="29" FontSize="16"/>
         <Label Content="Жизнь" HorizontalAlignment="Left" Margin="311,113,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
         <Label Content="Смерть" HorizontalAlignment="Left" Margin="311,140,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
         <TextBox HorizontalAlignment="Left" Height="59" Margin="21,107,0,0" TextWrapping="WrapWithOverflow" Text="10" VerticalAlignment="Top" Width="76" AllowDrop="True" TextAlignment="Center" FontStretch="Normal" FontStyle="Normal" CharacterCasing="Normal" FontSize="36" Foreground="#FFB3AD5C" Background="#FF2D0000" BorderBrush="#FFB3B2AB"/>
         <Label Content="Класс доспеха&#xA;" HorizontalAlignment="Left" Margin="15,165,0,0" VerticalAlignment="Top" Height="25" Foreground="#FFB3AD5C"/>
         <TextBox HorizontalAlignment="Left" Height="59" Margin="147,107,0,0" TextWrapping="WrapWithOverflow" Text="10" VerticalAlignment="Top" Width="76" AllowDrop="True" TextAlignment="Center" FontStretch="Normal" FontStyle="Normal" CharacterCasing="Normal" FontSize="36" Foreground="#FFB3AD5C" Background="#FF2D0000" BorderBrush="#FFB3B2AB"/>
         <Label Content="Инициатива&#xA;" HorizontalAlignment="Left" Margin="146,166,0,0" VerticalAlignment="Top" Height="25" Foreground="#FFB3AD5C" Width="86"/>
-        <Label Content="Хиты" HorizontalAlignment="Left" Margin="221,71,0,0" VerticalAlignment="Top" Height="27" Foreground="#FFB3AD5C"/>
+        <Label x:Name="___Без_имени_" Content="Хиты" HorizontalAlignment="Left" Margin="221,71,0,0" VerticalAlignment="Top" Height="27" Foreground="#FFB3AD5C"/>
         <Button Content="Владения" HorizontalAlignment="Left" Height="54" Margin="358,226,0,0" VerticalAlignment="Top" Width="146" Foreground="#FFB3AD5C" Background="#FF2D0000" Click="Ownership_ButtonClick"/>
         <Label Content="Урон | Лечение" HorizontalAlignment="Left" Margin="426,70,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
         <Button Content="Снаряжение" HorizontalAlignment="Left" Height="54" Margin="196,226,0,0" VerticalAlignment="Top" Width="146" Foreground="#FFB3AD5C" Background="#FF2D0000" Click="equipment_ButtonClick"/>
@@ -399,11 +399,14 @@
         <CheckBox Content="&#xA;" HorizontalAlignment="Left" Margin="366,119,0,0" VerticalAlignment="Top" Width="19" Height="19" Background="White"/>
         <CheckBox Content="&#xA;" HorizontalAlignment="Left" Margin="386,119,0,0" VerticalAlignment="Top" Width="19" Height="19" Background="White"/>
         <CheckBox Content="&#xA;" HorizontalAlignment="Left" Margin="406,119,0,0" VerticalAlignment="Top" Height="19" Width="19" Background="White"/>
-        <ProgressBar x:Name="HealthBar" HorizontalAlignment="Left" Height="20" Margin="305,74,0,0" VerticalAlignment="Top" Width="120" Value="70" Background="#FF120000" Foreground="#FFE01616" BorderBrush="#FF1F0000"/>
-        <TextBox x:Name="MaxHealth" HorizontalAlignment="Left" Height="21" Margin="281,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="23" Background="#FF1F0000" BorderBrush="{x:Null}" Foreground="#FFB3AD5C" Text="28"/>
+        <ProgressBar x:Name="HealthBar" HorizontalAlignment="Left" Height="20" Margin="305,74,0,0" VerticalAlignment="Top" Width="116" Value="100" Background="#FF120000" Foreground="#FFE01616" BorderBrush="#FF1F0000"/>
         <Label Content="/" HorizontalAlignment="Left" Height="23" Margin="271,72,0,0" VerticalAlignment="Top" Width="18" Foreground="#FFB3AD5C"/>
-        <Label x:Name="CurrentHealth" Content="24" HorizontalAlignment="Left" Height="28" Margin="254,72,0,0" VerticalAlignment="Top" Width="23" Foreground="#FFB3AD5C"/>
-        <TextBox x:Name="DamageHealBar" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="20" Margin="304,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB3AD5C"/>
+        <TextBox x:Name="DamageHealBar" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="20" Margin="304,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" KeyDown="DamageHealBar_KeyDown"/>
+        <TextBox x:Name="CurrentHealth" HorizontalAlignment="Left" Height="21" Margin="260,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="23" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFB3AD5C" Text="0"/>
+        <Label Content="М/Ж" HorizontalAlignment="Left" Height="26" Margin="200,24,0,0" VerticalAlignment="Top" Width="36" Foreground="#FFB3AD5C"/>
+        <Label x:Name="MaxHealth" Content="0" HorizontalAlignment="Left" Margin="282,72,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFB3AD5C"/>
+        <RadioButton x:Name="SEXM" Content="RadioButton" HorizontalAlignment="Left" Height="19" Margin="200,48,0,0" VerticalAlignment="Top" Width="18" GroupName="SEX" Checked="SEXM_Checked"/>
+        <RadioButton x:Name="SEXW" Content="RadioButton" HorizontalAlignment="Left" Height="19" Margin="221,48,0,0" VerticalAlignment="Top" Width="18" GroupName="SEX" Checked="SEXW_Checked"/>
 
     </Grid>
 

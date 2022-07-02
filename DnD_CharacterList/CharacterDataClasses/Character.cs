@@ -70,6 +70,9 @@ namespace DnD_CharacterList.CharacterDataClasses
 
         public Character()
         {
+            MaxHP = 28; //temp
+           CurrentHP = MaxHP;//temp
+
             LifeThrows = new bool[3];
             DeathThrows = new bool[3];
 
@@ -104,6 +107,18 @@ namespace DnD_CharacterList.CharacterDataClasses
                 level++;
             }
             Level = level;
+        }
+        public void HpDamageHeal(int value)
+        {
+            try
+            {
+               CurrentHP = CurrentHP + value;
+                if (CurrentHP < 0) { CurrentHP = 0;}
+                if (CurrentHP > MaxHP) { CurrentHP = MaxHP; }
+                
+            }
+            catch { }
+
         }
     }
 }

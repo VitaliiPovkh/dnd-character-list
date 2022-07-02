@@ -13,50 +13,60 @@ namespace DnD_CharacterList
     {
         private string[] charRace;
         private string[] charClass;
-
-        
-
+        private double healthbar;
+   
         public Character CharacterData { get; set; }
 
         public MainWindow()
-        {   
+        {
             InitializeComponent();
 
             RaceBox.SelectionChanged += RaceBox_SelectionChanged;
             ClassBox.SelectionChanged += ClassBox_SelectionChanged_1;
             XpBox.TextChanged += XpBox_TextChanged;
 
-            charRace = new string[] 
+            charRace = new string[]
             {
                 "Human", "Elf", "Half-Elf", "Gnome", "Dwarf",
                 "Dragonborn", "Changeling", "Ork", "Half-Ork",
-                "Satyr", "Tabaxy", "Tiefling" 
+                "Satyr", "Tabaxy", "Tiefling"
             };
 
-            charClass = new string[] 
-            { 
+            charClass = new string[]
+            {
                 "Bard", "Barbarian", "Warrior", "Wizard", "Druid",
-                "Priest","Inventor", "Warlock", "Monk", "Paladin", 
+                "Priest","Inventor", "Warlock", "Monk", "Paladin",
                 "Dodger", "Pathfinder", "Corcerer"
             };
-
-            
-
             CharacterData = new Character();
+            MaxHealth.Content = CharacterData.MaxHP;
+            CurrentHealth.Text = CharacterData.CurrentHP.ToString();
         }
-       
-        
-        private void RaceBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+
+        private void DamageHealBar_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {    if (e.Key == System.Windows.Input.Key.Enter)
+             {  CharacterData.HpDamageHeal(int.Parse(DamageHealBar.Text));
+                CurrentHealth.Text = CharacterData.CurrentHP.ToString();
+                healthbar = (double)CharacterData.CurrentHP / CharacterData.MaxHP * 100;
+                HealthBar.Value = (int)healthbar;
+                DamageHealBar.Text = "";
+             }
+        }
+        private void DamageHealBar_TextChanged(object sender, TextChangedEventArgs e)
         {
            
         }
-
+        private void RaceBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CharacterData.Race = charRace[RaceBox.SelectedIndex];
+           
+           
+        }
         private void ClassBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            
+            CharacterData.Class = charClass[ClassBox.SelectedIndex];
         }
-       
-        
         private void XpBox_TextChanged(object sender, RoutedEventArgs e) {
             int xpcount = 0;
             int.TryParse(XpBox.Text, out xpcount);
@@ -110,6 +120,13 @@ namespace DnD_CharacterList
             ThrowDicesWindow dicesWindow = new ThrowDicesWindow(CharacterData);
             dicesWindow.Show();
         }
-
+        private void SEXM_Checked(object sender, RoutedEventArgs e)
+        {
+            CharacterData.Sex = "Male";
+        }
+        private void SEXW_Checked(object sender, RoutedEventArgs e)
+        {
+            CharacterData.Sex = "Female";
+        }
     }
 }
