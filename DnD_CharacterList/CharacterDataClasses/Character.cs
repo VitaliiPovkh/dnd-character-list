@@ -8,17 +8,17 @@ namespace DnD_CharacterList.CharacterDataClasses
 {
     public enum Race
     {
-        HUMAN, ELF, HALF_ELF, GNOME, DWARF,
+        HUMAN = 0, ELF, HALF_ELF, GNOME, DWARF,
         DRAGONBORN, CHANGELING, ORC, HALF_ORC,
         SATYR, TABAXI, TIEFLING 
-    }
+    };
 
     public enum Class
     {
         BARD, BARBARIAN, WARRIOR, WIZARD, DRUID,
         PRIEST, INVENTOR, WARLOCK, MONK, PALADIN, 
         DODGER, PATHFINDER, SORCERER
-    }
+    };
 
     public class Character
     {
@@ -119,6 +119,23 @@ namespace DnD_CharacterList.CharacterDataClasses
             }
             catch { }
 
+        }
+        public void SetRace(int racenum)
+        {
+            try
+            {
+                CharacterDataClasses.Race race = (Race)Enum.GetValues(typeof(Race)).GetValue(racenum);
+                Race = race.ToString();
+            }catch { };
+        }
+
+        public void SetClass(int classnum)
+        {
+            try
+            {
+                CharacterDataClasses.Class race = (Class)Enum.GetValues(typeof(Class)).GetValue(classnum);
+                Class = race.ToString();
+            } catch { };
         }
     }
 }

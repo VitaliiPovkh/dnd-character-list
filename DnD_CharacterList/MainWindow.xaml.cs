@@ -11,8 +11,6 @@ namespace DnD_CharacterList
     /// </summary>
     public partial class MainWindow : Window, ICharacterWindow
     {
-        private string[] charRace;
-        private string[] charClass;
         private double healthbar;
    
         public Character CharacterData { get; set; }
@@ -25,19 +23,6 @@ namespace DnD_CharacterList
             ClassBox.SelectionChanged += ClassBox_SelectionChanged_1;
             XpBox.TextChanged += XpBox_TextChanged;
 
-            charRace = new string[]
-            {
-                "Human", "Elf", "Half-Elf", "Gnome", "Dwarf",
-                "Dragonborn", "Changeling", "Ork", "Half-Ork",
-                "Satyr", "Tabaxy", "Tiefling"
-            };
-
-            charClass = new string[]
-            {
-                "Bard", "Barbarian", "Warrior", "Wizard", "Druid",
-                "Priest","Inventor", "Warlock", "Monk", "Paladin",
-                "Dodger", "Pathfinder", "Corcerer"
-            };
             CharacterData = new Character();
             MaxHealth.Content = CharacterData.MaxHP;
             CurrentHealth.Text = CharacterData.CurrentHP.ToString();
@@ -59,13 +44,12 @@ namespace DnD_CharacterList
         }
         private void RaceBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            CharacterData.Race = charRace[RaceBox.SelectedIndex];
-           
-           
+            CharacterData.SetRace(RaceBox.SelectedIndex);
         }
         private void ClassBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            CharacterData.Class = charClass[ClassBox.SelectedIndex];
+            CharacterData.SetClass(ClassBox.SelectedIndex);
+         
         }
         private void XpBox_TextChanged(object sender, RoutedEventArgs e) {
             int xpcount = 0;
