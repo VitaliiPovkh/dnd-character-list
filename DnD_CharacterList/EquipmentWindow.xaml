@@ -6,106 +6,108 @@
         xmlns:local="clr-namespace:DnD_CharacterList"
         mc:Ignorable="d"
         Title="EquipmentWindow" Height="568" Width="701" Background="#FF33FFF0">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="46*"/>
-            <RowDefinition Height="107*"/>
-            <RowDefinition Height="123*"/>
-        </Grid.RowDefinitions>
+    <ScrollViewer>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="8*"/>
-                <RowDefinition Height="15*"/>
+                <RowDefinition Height="46*"/>
+                <RowDefinition Height="107*"/>
+                <RowDefinition Height="123*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition SharedSizeGroup="A"/>
-                <ColumnDefinition SharedSizeGroup="A"/>
-                <ColumnDefinition SharedSizeGroup="A"/>
-            </Grid.ColumnDefinitions>
-            <WrapPanel Grid.Row="1" Orientation="Vertical" Grid.ColumnSpan="2" Margin="0,2,233,0">
-                <Label Content="Название" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Padding="0,5,5,5" Height="34"/>
-                <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,0,0,0" Height="20"/>
-            </WrapPanel>
-            <WrapPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" Margin="0,2,0,0">
-                <Label Content="Тип брони" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Padding="0,5,5,5" Height="34"/>
-                <ComboBox Width="120" Margin="10,0,0,0" Height="20" VerticalContentAlignment="Top" HorizontalContentAlignment="Left"/>
-            </WrapPanel>
-            <WrapPanel Grid.Column="1" Orientation="Vertical" Margin="233,32,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                <Label Content="Класс доспеха" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Padding="0,5,5,5" Margin="10,0,0,0" Height="34"/>
-                <ComboBox Width="120" Height="20" Margin="10,0,0,0"/>
-            </WrapPanel>
-            <Label Content="Броня" Margin="10,0,233,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="15*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                    <ColumnDefinition SharedSizeGroup="A"/>
+                </Grid.ColumnDefinitions>
+                <WrapPanel Grid.Row="1" Orientation="Vertical" Grid.ColumnSpan="2" Margin="0,2,233,0">
+                    <Label Content="Название" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Padding="0,5,5,5" Height="34"/>
+                    <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,0,0,0" Height="20"/>
+                </WrapPanel>
+                <WrapPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" Margin="0,2,0,0">
+                    <Label Content="Тип брони" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Padding="0,5,5,5" Height="34"/>
+                    <ComboBox Width="120" Margin="10,0,0,0" Height="20" VerticalContentAlignment="Top" HorizontalContentAlignment="Left"/>
+                </WrapPanel>
+                <WrapPanel Grid.Column="1" Orientation="Vertical" Margin="233,32,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                    <Label Content="Класс доспеха" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Padding="0,5,5,5" Margin="10,0,0,0" Height="34"/>
+                    <ComboBox Width="120" Height="20" Margin="10,0,0,0"/>
+                </WrapPanel>
+                <Label Content="Броня" Margin="10,0,233,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5"/>
 
-        </Grid>
-        <Grid Margin="0,9,0,0" Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="37*"/>
-                <RowDefinition Height="126*"/>
-            </Grid.RowDefinitions>
-            <Label Content="Оружие" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Padding="0,5,5,5"/>
-            <StackPanel Grid.Row="1" Orientation="Vertical">
-                <Canvas Height="33">
-                    <Label Content="Название" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
-                    <Label Content="Тип урона" Canvas.Left="150" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
-                    <Label Content="Кость урона" Canvas.Left="270" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
-                    <Label Content="Помеха" Canvas.Left="421" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
-                    <Label Content="Бонус" Canvas.Left="505" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
-                </Canvas>
-                <Canvas Height="30">
-                    <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,5,0,0" Height="20"/>
-                    <ComboBox Width="90" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="150"/>
-                    <ComboBox Width="60" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="270"/>
-                    <Button Width="20" Height="20" Content="+" Canvas.Left="344" Margin="10,5,0,0"/>
-                    <Button Width="20" Height="20" Content="-" Canvas.Left="372" Margin="10,5,0,0"/>
-                    <CheckBox Canvas.Left="433" Margin="10,8,0,0"/>
-                    <CheckBox Canvas.Left="510" Margin="10,8,0,0"/>
-                    <Button Content="Атака" Width="120" Height="20" Canvas.Left="560" Margin="10,5,0,0"/>
-                </Canvas>
-                <Canvas Height="30">
-                    <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,5,0,0" Height="20"/>
-                    <ComboBox Width="90" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="150"/>
-                    <ComboBox Width="60" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="270"/>
-                    <Button Width="20" Height="20" Content="+" Canvas.Left="344" Margin="10,5,0,0"/>
-                    <Button Width="20" Height="20" Content="-" Canvas.Left="372" Margin="10,5,0,0"/>
-                    <CheckBox Canvas.Left="433" Margin="10,8,0,0"/>
-                    <CheckBox Canvas.Left="510" Margin="10,8,0,0"/>
-                    <Button Content="Атака" Width="120" Height="20" Canvas.Left="560" Margin="10,5,0,0"/>
-                </Canvas>
-                <Canvas Height="30">
-                    <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,5,0,0" Height="20"/>
-                    <ComboBox Width="90" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="150"/>
-                    <ComboBox Width="60" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="270"/>
-                    <Button Width="20" Height="20" Content="+" Canvas.Left="344" Margin="10,5,0,0"/>
-                    <Button Width="20" Height="20" Content="-" Canvas.Left="372" Margin="10,5,0,0"/>
-                    <CheckBox Canvas.Left="433" Margin="10,8,0,0"/>
-                    <CheckBox Canvas.Left="510" Margin="10,8,0,0"/>
-                    <Button Content="Атака" Width="120" Height="20" Canvas.Left="560" Margin="10,5,0,0"/>
-                </Canvas>
-            </StackPanel>
-        </Grid>
-        <StackPanel Grid.Row="2">
-            <Label Content="Дополнительные предметы" Margin="10,0,233,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5"/>
-            <Canvas Height="30">
-                <Button Content="Добавить" Width="80" Height="20" Canvas.Left="0" Margin="10,5,0,0" Click="Button_Click"/>
-                <Button Content="Удалить" Width="80" Height="20" Canvas.Left="85" Margin="10,5,0,0"/>
-            </Canvas>
-            <ListBox Height="173" Width="680">
-                <StackPanel Height="80" Width="665" Background="#FFD28743">
-                    <Canvas Height="25">
-                        <Label Content="Название" FontFamily="Monotype Corsiva" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="10,0,0,0"/>
-                        <Label Content="КД" FontFamily="Monotype Corsiva" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5" Canvas.Left="140" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13"/>
-                        <Label Content="Эффект" FontFamily="Monotype Corsiva" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5" Canvas.Left="220" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13"/>
+            </Grid>
+            <Grid Margin="0,9,0,0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="37*"/>
+                    <RowDefinition Height="126*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Оружие" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Padding="0,5,5,5"/>
+                <StackPanel Grid.Row="1" Orientation="Vertical">
+                    <Canvas Height="33">
+                        <Label Content="Название" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
+                        <Label Content="Тип урона" Canvas.Left="150" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
+                        <Label Content="Кость урона" Canvas.Left="270" Margin="10,0,0,0" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
+                        <Label Content="Помеха" Canvas.Left="421" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
+                        <Label Content="Бонус" Canvas.Left="505" FontFamily="Monotype Corsiva" FontSize="20" FontWeight="Bold" Padding="0,5,5,5"/>
                     </Canvas>
-                    <Canvas Height="55">
+                    <Canvas Height="30">
                         <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,5,0,0" Height="20"/>
-                        <TextBox TextWrapping="Wrap" Text="TextBox" Width="60" Height="20" Canvas.Left="140" Canvas.Top="5"/>
-                        <TextBox TextWrapping="Wrap" Text="TextBox" Width="230" Height="40" Canvas.Left="220" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="5"/>
-                        <Button Content="Атака" Width="120" Height="20" Canvas.Left="460" Margin="10,5,0,0"/>
-                        <CheckBox Canvas.Left="620" Canvas.Top="10" BorderThickness="1,1,1,1" Width="15.9749803543091" Panel.ZIndex="-1"/>
+                        <ComboBox Width="90" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="150"/>
+                        <ComboBox Width="60" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="270"/>
+                        <Button Width="20" Height="20" Content="+" Canvas.Left="344" Margin="10,5,0,0"/>
+                        <Button Width="20" Height="20" Content="-" Canvas.Left="372" Margin="10,5,0,0"/>
+                        <CheckBox Canvas.Left="433" Margin="10,8,0,0"/>
+                        <CheckBox Canvas.Left="510" Margin="10,8,0,0"/>
+                        <Button Content="Атака" Width="120" Height="20" Canvas.Left="550" Margin="10,5,0,0"/>
+                    </Canvas>
+                    <Canvas Height="30">
+                        <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,5,0,0" Height="20"/>
+                        <ComboBox Width="90" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="150"/>
+                        <ComboBox Width="60" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="270"/>
+                        <Button Width="20" Height="20" Content="+" Canvas.Left="344" Margin="10,5,0,0"/>
+                        <Button Width="20" Height="20" Content="-" Canvas.Left="372" Margin="10,5,0,0"/>
+                        <CheckBox Canvas.Left="433" Margin="10,8,0,0"/>
+                        <CheckBox Canvas.Left="510" Margin="10,8,0,0"/>
+                        <Button Content="Атака" Width="120" Height="20" Canvas.Left="550" Margin="10,5,0,0"/>
+                    </Canvas>
+                    <Canvas Height="30">
+                        <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,5,0,0" Height="20"/>
+                        <ComboBox Width="90" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="150"/>
+                        <ComboBox Width="60" Margin="10,5,0,0" Height="20" Canvas.Top="0" Canvas.Left="270"/>
+                        <Button Width="20" Height="20" Content="+" Canvas.Left="344" Margin="10,5,0,0"/>
+                        <Button Width="20" Height="20" Content="-" Canvas.Left="372" Margin="10,5,0,0"/>
+                        <CheckBox Canvas.Left="433" Margin="10,8,0,0"/>
+                        <CheckBox Canvas.Left="510" Margin="10,8,0,0"/>
+                        <Button Content="Атака" Width="120" Height="20" Canvas.Left="550" Margin="10,5,0,0"/>
                     </Canvas>
                 </StackPanel>
-                
-            </ListBox>
-        </StackPanel>
-    </Grid>
+            </Grid>
+            <StackPanel Grid.Row="2">
+                <Label Content="Дополнительные предметы" Margin="10,0,233,0" FontFamily="Monotype Corsiva" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5"/>
+                <Canvas Height="30">
+                    <Button Content="Добавить" Width="80" Height="20" Canvas.Left="0" Margin="10,5,0,0"/>
+                    <Button Content="Удалить" Width="80" Height="20" Canvas.Left="85" Margin="10,5,0,0"/>
+                </Canvas>
+                <ListBox Height="173" Width="680">
+                    <StackPanel Height="80" Width="665" Background="#FFD28743">
+                        <Canvas Height="25">
+                            <Label Content="Название" FontFamily="Monotype Corsiva" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5" Canvas.Left="0" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13" Margin="10,0,0,0"/>
+                            <Label Content="КД" FontFamily="Monotype Corsiva" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5" Canvas.Left="140" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13"/>
+                            <Label Content="Эффект" FontFamily="Monotype Corsiva" FontWeight="Bold" Grid.ColumnSpan="2" Padding="0,5,5,5" Canvas.Left="220" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="13"/>
+                        </Canvas>
+                        <Canvas Height="55">
+                            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120" Margin="10,5,0,0" Height="20"/>
+                            <TextBox TextWrapping="Wrap" Text="TextBox" Width="60" Height="20" Canvas.Left="140" Canvas.Top="5"/>
+                            <TextBox TextWrapping="Wrap" Text="TextBox" Width="230" Height="40" Canvas.Left="220" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="5"/>
+                            <Button Content="Атака" Width="120" Height="20" Canvas.Left="460" Margin="10,5,0,0"/>
+                            <CheckBox Canvas.Left="620" Canvas.Top="10" BorderThickness="1,1,1,1" Width="15.9749803543091" Panel.ZIndex="-1"/>
+                        </Canvas>
+                    </StackPanel>
+
+                </ListBox>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Window>
