@@ -31,10 +31,16 @@ namespace DnD_CharacterList
 
         private void DamageHealBar_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {    if (e.Key == System.Windows.Input.Key.Enter)
-             {  CharacterData.HpDamageHeal(int.Parse(DamageHealBar.Text));
+             {
+                int hpChangeValue = 0;
+                int.TryParse(DamageHealBar.Text, out hpChangeValue);
+                CharacterData.HpDamageHeal(hpChangeValue);
+
                 CurrentHealth.Text = CharacterData.CurrentHP.ToString();
+
                 healthbar = (double)CharacterData.CurrentHP / CharacterData.MaxHP * 100;
                 HealthBar.Value = (int)healthbar;
+
                 DamageHealBar.Text = "";
              }
         }
@@ -51,7 +57,8 @@ namespace DnD_CharacterList
             CharacterData.SetClass(ClassBox.SelectedIndex);
          
         }
-        private void XpBox_TextChanged(object sender, RoutedEventArgs e) {
+        private void XpBox_TextChanged(object sender, RoutedEventArgs e)
+        {
             int xpcount = 0;
             int.TryParse(XpBox.Text, out xpcount);
 

@@ -23,5 +23,6 @@ namespace DnD_CharacterList
         {
             InitializeComponent();
         }
+
     }
 }
