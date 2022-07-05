@@ -8,7 +8,6 @@ namespace DnD_CharacterList.CharacterDataClasses
 {
     public enum Stat
     {
-        NO_STAT,
         STRENGTH,
         AGILITY,
         CONSTITUTION,

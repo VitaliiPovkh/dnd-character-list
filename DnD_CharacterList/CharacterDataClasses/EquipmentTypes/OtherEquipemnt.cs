@@ -15,7 +15,7 @@ namespace DnD_CharacterList.CharacterDataClasses.EquipmentTypes
 
         public OtherEquipment()
         {
-            DamageDice = Dice.EIGHT;
+            DamageDice = Dice.FOUR;
         }
     }
 }

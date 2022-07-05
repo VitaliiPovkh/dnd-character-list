@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DnD_CharacterList.CharacterDataClasses.EquipmentTypes
+namespace DnD_CharacterList.CharacterDataClasses.EquipmentTypes.Weapons
 {
     public enum WeaponType
     {
