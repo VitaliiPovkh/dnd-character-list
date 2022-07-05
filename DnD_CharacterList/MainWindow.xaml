@@ -342,10 +342,10 @@
         <Label x:Name="LevelCount" Content="1" HorizontalAlignment="Left" Margin="478,25,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C" Height="27" Width="29" FontSize="16"/>
         <Label Content="Жизнь" HorizontalAlignment="Left" Margin="311,113,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
         <Label Content="Смерть" HorizontalAlignment="Left" Margin="311,140,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
-        <TextBox HorizontalAlignment="Left" Height="59" Margin="21,107,0,0" TextWrapping="WrapWithOverflow" Text="10" VerticalAlignment="Top" Width="76" AllowDrop="True" TextAlignment="Center" FontStretch="Normal" FontStyle="Normal" CharacterCasing="Normal" FontSize="36" Foreground="#FFB3AD5C" Background="#FF2D0000" BorderBrush="#FFB3B2AB"/>
-        <Label Content="Класс доспеха&#xA;" HorizontalAlignment="Left" Margin="15,165,0,0" VerticalAlignment="Top" Height="25" Foreground="#FFB3AD5C"/>
-        <TextBox HorizontalAlignment="Left" Height="59" Margin="147,107,0,0" TextWrapping="WrapWithOverflow" Text="10" VerticalAlignment="Top" Width="76" AllowDrop="True" TextAlignment="Center" FontStretch="Normal" FontStyle="Normal" CharacterCasing="Normal" FontSize="36" Foreground="#FFB3AD5C" Background="#FF2D0000" BorderBrush="#FFB3B2AB"/>
-        <Label Content="Инициатива&#xA;" HorizontalAlignment="Left" Margin="146,166,0,0" VerticalAlignment="Top" Height="25" Foreground="#FFB3AD5C" Width="86"/>
+        <TextBox HorizontalAlignment="Left" Height="59" Margin="21,136,0,0" TextWrapping="WrapWithOverflow" Text="10" VerticalAlignment="Top" Width="76" AllowDrop="True" TextAlignment="Center" FontStretch="Normal" FontStyle="Normal" CharacterCasing="Normal" FontSize="36" Foreground="#FFB3AD5C" Background="#FF2D0000" BorderBrush="#FFB3B2AB"/>
+        <Label Content="Класс доспеха&#xA;" HorizontalAlignment="Left" Margin="15,194,0,0" VerticalAlignment="Top" Height="25" Foreground="#FFB3AD5C"/>
+        <TextBox HorizontalAlignment="Left" Height="59" Margin="147,136,0,0" TextWrapping="WrapWithOverflow" Text="10" VerticalAlignment="Top" Width="76" AllowDrop="True" TextAlignment="Center" FontStretch="Normal" FontStyle="Normal" CharacterCasing="Normal" FontSize="36" Foreground="#FFB3AD5C" Background="#FF2D0000" BorderBrush="#FFB3B2AB"/>
+        <Label Content="Инициатива&#xA;" HorizontalAlignment="Left" Margin="146,195,0,0" VerticalAlignment="Top" Height="25" Foreground="#FFB3AD5C" Width="86"/>
         <Label x:Name="___Без_имени_" Content="Хиты" HorizontalAlignment="Left" Margin="221,71,0,0" VerticalAlignment="Top" Height="27" Foreground="#FFB3AD5C"/>
         <Button Content="Владения" HorizontalAlignment="Left" Height="54" Margin="358,226,0,0" VerticalAlignment="Top" Width="146" Foreground="#FFB3AD5C" Background="#FF2D0000" Click="Ownership_ButtonClick"/>
         <Label Content="Урон | Лечение" HorizontalAlignment="Left" Margin="426,70,0,0" VerticalAlignment="Top" Foreground="#FFB3AD5C"/>
@@ -407,6 +407,9 @@
         <Label x:Name="MaxHealth" Content="0" HorizontalAlignment="Left" Margin="282,72,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFB3AD5C"/>
         <RadioButton x:Name="SEXM" Content="RadioButton" HorizontalAlignment="Left" Height="19" Margin="200,48,0,0" VerticalAlignment="Top" Width="18" GroupName="SEX" Checked="SEXM_Checked"/>
         <RadioButton x:Name="SEXW" Content="RadioButton" HorizontalAlignment="Left" Height="19" Margin="221,48,0,0" VerticalAlignment="Top" Width="18" GroupName="SEX" Checked="SEXW_Checked"/>
+        <ListBox x:Name="SubClassBox" HorizontalAlignment="Left" Height="113" Margin="86,102,0,0" VerticalAlignment="Top" Width="164" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FF1F0000" BorderBrush="{x:Null}" Foreground="#FFB3AD5C" Visibility="Visible"/>
+        <Label Content="Подкласс" HorizontalAlignment="Left" Height="25" Margin="10,103,0,0" VerticalAlignment="Top" Width="62" Foreground="#FFB3AD5C"/>
+        <Button x:Name="SubClassShowButton" Content="" HorizontalAlignment="Left" Height="13" Margin="69,111,0,0" VerticalAlignment="Top" Width="12" Click="SubClassShowButton_Click"/>
 
     </Grid>
 
