@@ -17,7 +17,7 @@ namespace DnD_CharacterList.CharacterDataClasses
     {
         BARD, BARBARIAN, WARRIOR, WIZARD, DRUID,
         PRIEST, INVENTOR, WARLOCK, MONK, PALADIN, 
-        DODGER, PATHFINDER, SORCERER
+        DODGER, PATHFINDER, SORCERER,
     };
 
     public class Character
@@ -31,15 +31,18 @@ namespace DnD_CharacterList.CharacterDataClasses
          */
         private int currentHP;
 
+
         public string? Name { get; set; }
         public string? Race { get; set; } // Enum ??
         public string? Class { get; set; } // Enum ??
+        public string? SubClass { get; set; }
+        public string[] SubClassesT { get; set; }
         public string? Sex { get; set; }
         public int MaxHP { get; private set; }
         public int CurrentHP
         {
             get { return currentHP; }
-            set 
+            set
             {
                 if (value > MaxHP)
                 {
@@ -54,7 +57,7 @@ namespace DnD_CharacterList.CharacterDataClasses
         public int Expirience { get; set; }
         public int Level { get; private set; }
         public int ArmourClass { get; private set; } //?
-        public int Initiative { get; set;}
+        public int Initiative { get; set; }
         public bool[] LifeThrows { get; private set; }
         public bool[] DeathThrows { get; private set; }
         public Personality CharactersPersonality { get; private set; }
@@ -71,7 +74,7 @@ namespace DnD_CharacterList.CharacterDataClasses
         public Character()
         {
             MaxHP = 28; //temp
-           CurrentHP = MaxHP;//temp
+            CurrentHP = MaxHP;//temp
 
             LifeThrows = new bool[3];
             DeathThrows = new bool[3];
@@ -92,7 +95,7 @@ namespace DnD_CharacterList.CharacterDataClasses
                 265000, 305000, 355000
             };
         }
-        
+
         public void RecalculateLevel()
         {
             int biggerMilestone = expirienceMilestones.Find(x =>
@@ -112,10 +115,10 @@ namespace DnD_CharacterList.CharacterDataClasses
         {
             try
             {
-               CurrentHP = CurrentHP + value;
-                if (CurrentHP < 0) { CurrentHP = 0;}
+                CurrentHP = CurrentHP + value;
+                if (CurrentHP < 0) { CurrentHP = 0; }
                 if (CurrentHP > MaxHP) { CurrentHP = MaxHP; }
-                
+
             }
             catch { }
 
@@ -124,18 +127,20 @@ namespace DnD_CharacterList.CharacterDataClasses
         {
             try
             {
-                CharacterDataClasses.Race race = (Race)Enum.GetValues(typeof(Race)).GetValue(racenum);
+                Race race = (Race)Enum.GetValues(typeof(Race)).GetValue(racenum);
                 Race = race.ToString();
-            }catch { };
+            } catch { };
         }
 
-        public void SetClass(int classnum)
+
+        public string[] SetClass(int classnum)
         {
-            try
-            {
-                CharacterDataClasses.Class race = (Class)Enum.GetValues(typeof(Class)).GetValue(classnum);
-                Class = race.ToString();
-            } catch { };
+
+            Class race = (Class)Enum.GetValues(typeof(Class)).GetValue(classnum);
+            Class = race.ToString();
+            Classes.ClassChoose cls = new Classes.ClassChoose();
+            string[] moresubs = cls.Choose(Class);
+            return moresubs;
         }
     }
 }

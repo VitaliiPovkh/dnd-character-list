@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using DnD_CharacterList.CharacterDataClasses;
+using System;
 
 namespace DnD_CharacterList
 {
@@ -12,6 +13,7 @@ namespace DnD_CharacterList
     public partial class MainWindow : Window, ICharacterWindow
     {
         private double healthbar;
+        private string[] subclassnums;
    
         public Character CharacterData { get; set; }
 
@@ -22,12 +24,36 @@ namespace DnD_CharacterList
             RaceBox.SelectionChanged += RaceBox_SelectionChanged;
             ClassBox.SelectionChanged += ClassBox_SelectionChanged_1;
             XpBox.TextChanged += XpBox_TextChanged;
-
+            SubClassBox.SelectionChanged += SubClassBox_SelectionChanged;
             CharacterData = new Character();
             MaxHealth.Content = CharacterData.MaxHP;
             CurrentHealth.Text = CharacterData.CurrentHP.ToString();
+            
+        }
+        private void SubClassShowButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SubClassBox.Visibility == Visibility.Hidden)
+            {
+                SubClassBox.Visibility = Visibility.Visible;
+            }
+            else { SubClassBox.Visibility = Visibility.Hidden; }
+
+
         }
 
+        private void SubClassBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            if (SubClassBox.SelectedItem != null)
+            {
+                string? sub = SubClassBox.SelectedItem.ToString();
+                CharacterData.SubClass = sub;
+              
+                SubClassBox.Visibility = Visibility.Hidden;
+            }
+        }
+
+      
 
         private void DamageHealBar_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {    if (e.Key == System.Windows.Input.Key.Enter)
@@ -38,18 +64,23 @@ namespace DnD_CharacterList
                 DamageHealBar.Text = "";
              }
         }
-        private void DamageHealBar_TextChanged(object sender, TextChangedEventArgs e)
-        {
-           
-        }
+     
+        
+        
+        
         private void RaceBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             CharacterData.SetRace(RaceBox.SelectedIndex);
         }
         private void ClassBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            CharacterData.SetClass(ClassBox.SelectedIndex);
-         
+            SubClassBox.Items.Clear();
+            string[] subclassnums = CharacterData.SetClass(ClassBox.SelectedIndex);
+            int a = 0;
+            foreach (string i in subclassnums)
+            {SubClassBox.Items.Add(subclassnums[a]); a++; }
+           
+            SubClassBox.Visibility = Visibility.Visible;
         }
         private void XpBox_TextChanged(object sender, RoutedEventArgs e) {
             int xpcount = 0;
